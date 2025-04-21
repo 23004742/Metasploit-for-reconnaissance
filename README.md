@@ -21,34 +21,22 @@ Investigate on the various categories of tools as follows:
 Open terminal and try execute some kali linux commands
 
 ## EXECUTION STEPS AND ITS OUTPUT:
-Find out the ip address of the attackers system
+![Screenshot 2025-03-28 134713](https://github.com/user-attachments/assets/14fdde84-fc4a-4797-8e46-b1515f13984b)
+![Screenshot 2025-03-28 134833](https://github.com/user-attachments/assets/3f08834f-c945-4049-b6ac-a0b221507411)
+![Screenshot 2025-03-28 135125](https://github.com/user-attachments/assets/14757cd8-0f1f-4e36-8a5f-9dc5e8c94f15)
+![Screenshot 2025-03-28 135716](https://github.com/user-attachments/assets/d94d640a-64b1-4795-b748-a0ef30f2ef4e)
+![Screenshot 2025-03-28 144634](https://github.com/user-attachments/assets/3e7f3eb8-783b-47ba-8165-94ecf682a1f8)
+![Screenshot 2025-03-28 135803](https://github.com/user-attachments/assets/7a3f68e1-c4fe-4aa4-a9a2-6307474de24b)
+![Screenshot 2025-03-28 145039](https://github.com/user-attachments/assets/270ba7ab-6cec-4c71-853f-22b45165f6b7)
+
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/f39e8ea0-b4b0-4578-9a95-c63b7c2dc390)
 
-Before beginning, set up the Metasploit database by starting the PostgreSQL server and initialize msfconsole database as follows: systemctl start postgresql msfdb init Invoke msfconsole:
-![image](https://github.com/user-attachments/assets/9de0b1b9-0850-4d1d-b6fd-9ff56cc6e427)
+![zFBjmNXm](https://github.com/user-attachments/assets/4ef9a1d1-7759-4fb0-8956-036832539b17)
+
+![Screenshot 2025-03-28 145058](https://github.com/user-attachments/assets/14ed3af8-db0e-4585-9012-51f6403b314a)
 
 
-Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
-![image](https://github.com/user-attachments/assets/65453478-08ed-40db-979a-f76d3d02843b) 
-Port Scanning: Following command is executed for scanning the systems on our local area network with a TCP scan (-sT) looking for open ports between 1 and 1000 (-p1-1000). msf > nmap -sT 192.168.1810/24 -p1-1000 OUTPUT:
-
- ![image](https://github.com/user-attachments/assets/16dae656-4edc-41fc-ad10-e9173fdf27b1)
-
-multitude of scanning modules built in. If we open another terminal, we can navigate to Metasploit's auxiliary modules and list all the scanner modules. cd /usr/share /metasploit-framework/modules/auxiliary kali > ls -l output:
-![image](https://github.com/user-attachments/assets/5715f7e4-6c19-4d6e-aa88-6cce3748b258)
-Search is a powerful command in Metasploit that you can use to find what you want to locate. msf >search name:Microsoft type:exploit output:
-![image](https://github.com/user-attachments/assets/de8f953d-d64b-4917-b587-b0af76014185)
-The info command provides information regarding a module or platform,
-
-![image](https://github.com/user-attachments/assets/9b90a5db-9833-47e8-a00b-92c57464dbf1)
-
-MYSQL ENUMERATION Find the IP address of the Metasploitable machine first. Then, use the db_nmap command in msfconsole with Nmap flags to scan the MySQL database at 3306 port. db_nmap -sV -sC -p 3306 <metasploitable_ip_address>
-![image](https://github.com/user-attachments/assets/4d31d846-b329-49c9-9f23-134afc91fcef)
-
-Use the search option to look for an auxiliary module to scan and enumerate the MySQL database. search type:auxiliary mysql use the auxiliary/scanner/mysql/mysql_version module by typing the module name or associated number to scan MySQL version details. use 11 Or: use auxiliary/scanner/mysql/mysql_version
-![image](https://github.com/user-attachments/assets/9ad96ebc-d78e-49f7-a2b8-0ce3281e4daf)
 
 ## RESULT:
 The Metasploit framework for reconnaissance is  examined successfully
